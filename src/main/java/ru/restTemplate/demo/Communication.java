@@ -37,7 +37,7 @@ public class Communication {
         headers.put(HttpHeaders.COOKIE, Collections.singletonList(sessionId));
         headers.add(HttpHeaders.CONTENT_TYPE, "application/json");
 
-        User user = new User("Thomas", "Shelby", (byte) 27);
+        User user = new User("James", "Brown", (byte) 27);
         user.setId(3L);
         HttpEntity<User> entity = new HttpEntity<>(user, headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(BASE_URL, HttpMethod.POST, entity, String.class);
